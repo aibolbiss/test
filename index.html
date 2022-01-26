@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <div id="sidebar" class="sidebar">
+        <div class="company">
+          <img src="img/microsoft_logo.png" class="company__logo" alt="Logo" />
+          <a href="#" class="company__name">Microsoft Company</a>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <img src="img/main.png" alt="Logo" />
+              <a href="#" class="link">Главная</a>
+            </li>
+            <li>
+              <img src="img/clients.png" alt="Logo" />
+              <a href="#" class="link">Клиенты</a>
+            </li>
+            <li>
+              <img src="img/employee.png" alt="Logo" />
+              <a href="#" class="link">Сотрудники</a>
+            </li>
+            <li>
+              <img src="img/analytics.png" alt="Logo" />
+              <a href="#" class="link">Аналитика</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="main">
+        <div style="position: sticky; top: 0">
+          <div class="header">
+            <input type="text" class="header__input" placeholder="Поиск" />
+            <div class="header__profile">
+              <p>Петров В.А.</p>
+              <img src="img/microsoft_logo.png" alt="Logo" />
+            </div>
+          </div>
+
+          <div class="filter">
+            <div class="filter__block">
+              <p>Filter Block</p>
+              <button class="setting"></button>
+            </div>
+
+            <div class="aibol">
+              <div class="flex">
+                <input
+                  type="text"
+                  placeholder="Дата от"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                />
+                <input
+                  type="text"
+                  placeholder="Дата до"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                />
+                <input
+                  type="text"
+                  placeholder="Дата от"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                />
+                <input
+                  type="text"
+                  placeholder="Дата до"
+                  onfocus="(this.type='date')"
+                  onblur="(this.type='text')"
+                />
+
+                <input type="text" placeholder="Имя клиента" />
+                <input type="text" placeholder="Номер" class="phone" />
+                <input type="text" placeholder="Имя клиента" />
+                <input type="text" placeholder="Номер" class="phone" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <p>
+            MAIN CONTENT - основной блок <br />
+            При скроллинге прокручивается данный блок
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const main = document.getElementById("main");
+      const setting = document.querySelector(".setting");
+      const aibol = document.querySelector(".aibol");
+
+      sidebar.addEventListener("mouseover", () => {
+        sidebar.style.width = "350px";
+        main.style.marginLeft = "350px";
+      });
+
+      sidebar.addEventListener("mouseout", () => {
+        sidebar.style.width = "90px";
+        main.style.marginLeft = "90px";
+      });
+
+      setting.addEventListener("click", () => {
+        aibol.style.display !== "block"
+          ? ((aibol.style.display = "block"),
+            (setting.style.transform = "rotate(90deg)"))
+          : ((aibol.style.display = "none"),
+            (setting.style.transform = "rotate(-90deg)"));
+      });
+
+      $(document).ready(function () {
+        $(".phone").inputmask({ mask: "+7 (999) 999-9999" });
+      });
+    </script>
+  </body>
+</html>

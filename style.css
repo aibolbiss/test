@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+}
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    display:inline-block;
+    font-size: 24px;
+    transition: .5s;
+}
+a:hover{
+    color: #9bf4f5;
+}
+input{
+    padding: 5px 10px;
+}
+.sidebar {
+    height: 100%;
+    width: 90px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+  }
+  .company {
+      display: flex;
+      margin: 0 20px 40px 20px;
+  }
+  .company__logo {
+      width: 50px;
+      float: left;
+  }
+  .company__name {
+    width: 300px;
+    position: absolute;
+    left: 70px;
+    padding: 10px 10px 10px 20px;
+ }
+
+  #main{
+    margin: 0 0 0 90px;
+    transition: margin-left .5s;
+  }
+  .menu>ul{
+    padding-left: 29px;
+  }
+  .menu>ul>li{
+    margin-bottom: 30px;
+    display: flex;
+  }
+  .menu>ul>li>img{
+      width: 30px;
+      height: 30px;
+  }
+  .menu>ul>li>a{
+    padding: 0 10px 0 31px;
+  }
+
+
+  /* HEADER BLOCK */
+  .header{
+      height: 50px;
+      background: #ccc;
+      display: flex;
+      justify-content: space-between;
+  }
+  .header__input{
+      width: 200px;
+      margin: 10px 0 10px 10px;
+      padding-left: 10px;
+      border: none
+  }
+  .header__input:focus{
+      outline: none;
+  }
+  .header__profile{
+      display: flex;
+  }
+  .header__profile>p{
+      padding: 10px 10px 10px 0;
+      line-height: 26px;
+  }
+  .header__profile>img{
+      width: 50px;
+      height: 50px;
+  }
+
+  /* FILTER BLOCK */
+  .filter{
+      border-bottom: 1px solid #000;
+      background-color: #fff;
+  }
+  .filter__block{
+      display: flex;
+      justify-content: space-between;
+  }
+  .filter__block>p{
+      margin: 15px 0 15px 15px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  .filter__block>.setting{
+      width: 35px;
+      height: 35px;
+      background-image: url('./img//settings.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      padding: 0;
+      margin: 8px;
+      background-color: #fff;
+      border: none;
+      transition: .5s;
+  }
+  .aibol{
+      display: none;
+  }
+  .flex{
+      display: flex;
+      margin: 0 0 0 15px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+  }
+  .flex>input{
+      margin: 0 10px 10px 0;
+      width: 20%;
+      height: 20px;
+  }
+
+  .content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      background-color: #fff;
+      overflow-x: scroll;
+  }
+  .content>p{
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+  }
